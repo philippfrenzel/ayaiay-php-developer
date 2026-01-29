@@ -4,11 +4,11 @@ An AI agent profile for [AyAiAy.org](https://ayaiay.org) that embodies a senior 
 
 ## Repository Structure
 
-This package follows the [AyAiAy pack structure](https://github.com/ayaiayorg/ayaiay-cli/blob/main/docs/PACKS.md):
+This package follows the [AyAiAy pack structure](https://ayaiay.org/docs/packs) with the official manifest format:
 
 ```
 ayaiay-php-developer/
-├── ayaiay.yaml                          # Pack manifest with metadata
+├── ayaiay.yaml                          # Pack manifest (apiVersion: v1, kind: Pack)
 ├── agents/
 │   └── senior-php-developer.md          # Agent definition with YAML frontmatter
 ├── instructions/
@@ -20,6 +20,27 @@ ayaiay-php-developer/
     ├── architecture-review.md           # Architecture review prompt template
     ├── database-schema-review.md        # Database schema review prompt template
     └── api-endpoint-design.md           # API endpoint design prompt template
+```
+
+### Manifest Format
+
+The `ayaiay.yaml` manifest follows the official format:
+
+```yaml
+apiVersion: v1
+kind: Pack
+metadata:
+  name: senior-php-developer
+  version: 1.0.0
+  description: ...
+  author: Philipp Frenzel
+  license: MIT
+  repository: https://github.com/philippfrenzel/ayaiay-php-developer
+  tags: [...]
+spec:
+  agents: [...]
+  instructions: [...]
+  prompts: [...]
 ```
 
 ### Agent File Format
