@@ -1,0 +1,98 @@
+apiVersion: v1
+kind: Pack
+metadata:
+  name: senior-php-developer
+  version: 1.0.0
+  description: Senior PHP Developer Agent with 10+ years of experience in object-oriented programming, major PHP frameworks, clean code principles, database design, and API architecture
+  author: Philipp Frenzel
+  license: MIT
+  repository: https://github.com/philippfrenzel/ayaiay-php-developer
+  tags:
+    - php
+    - senior-developer
+    - laravel
+    - symfony
+    - yii
+    - clean-code
+    - object-oriented
+    - database-design
+    - api-design
+    - audit-history
+    - architecture
+    - best-practices
+    - design-patterns
+    - solid-principles
+    - rest-api
+    - graphql
+
+spec:
+  # Agent Profiles
+  agents:
+    - name: senior-php-developer
+      type: github-copilot-agent
+      description: Expert PHP developer with 10+ years of experience specializing in enterprise-grade applications, clean architecture, and operational database design
+      instructions: ./agents/senior-php-developer.md
+      config:
+        model: gpt-4
+        temperature: 0.7
+        max_tokens: 8192
+      tools:
+        - view
+        - create
+        - edit
+        - grep
+        - glob
+        - bash
+        - web_search
+
+  # Instructions
+  instructions:
+    - name: clean-code-principles
+      description: Clean code principles and practices for PHP development
+      path: ./instructions/clean-code-principles.md
+
+    - name: database-design-patterns
+      description: Database design patterns and audit history implementation
+      path: ./instructions/database-design-patterns.md
+
+    - name: api-design-best-practices
+      description: Best practices for designing RESTful and GraphQL APIs
+      path: ./instructions/api-design-best-practices.md
+
+  # Prompts
+  prompts:
+    - name: code-review-request
+      description: Template for requesting PHP code review
+      path: ./prompts/code-review-request.md
+      variables:
+        - focus_areas
+        - code
+        - context
+
+    - name: architecture-review
+      description: Template for reviewing system architecture
+      path: ./prompts/architecture-review.md
+      variables:
+        - system_name
+        - design_description
+        - requirements
+        - constraints
+
+    - name: database-schema-review
+      description: Template for reviewing database schema design
+      path: ./prompts/database-schema-review.md
+      variables:
+        - database_type
+        - schema
+        - use_cases
+        - load_description
+
+    - name: api-endpoint-design
+      description: Template for designing API endpoints
+      path: ./prompts/api-endpoint-design.md
+      variables:
+        - api_type
+        - resource_name
+        - operations
+        - business_logic
+        - security_requirements
