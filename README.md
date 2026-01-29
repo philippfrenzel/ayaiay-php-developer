@@ -17,12 +17,22 @@ This agent is designed to assist with professional PHP development tasks, bringi
 
 This package is designed to work with the [AyAiAy CLI](https://github.com/ayaiayorg/ayaiay-cli).
 
+> ⚠️ **Note**: The AyAiAy CLI is not yet published to PyPI. Until then, you can use it directly from GitHub:
+> ```bash
+> pip install git+https://github.com/ayaiayorg/ayaiay-cli.git
+> ```
+
+**Once the CLI is available:**
+
 ```bash
-# Install the CLI (once available)
+# Install the CLI
 pip install ayaiay
 
 # Install this agent pack
 ayaiay install philippfrenzel/ayaiay-php-developer
+
+# Or add to your project's ayaiay.json
+ayaiay add philippfrenzel/ayaiay-php-developer
 ```
 
 ## Features
