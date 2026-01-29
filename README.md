@@ -2,6 +2,44 @@
 
 An AI agent profile for [AyAiAy.org](https://ayaiay.org) that embodies a senior PHP developer with 10+ years of experience.
 
+## Repository Structure
+
+This package follows the [AyAiAy pack structure](https://github.com/ayaiayorg/ayaiay-cli/blob/main/docs/PACKS.md):
+
+```
+ayaiay-php-developer/
+├── ayaiay.yaml                          # Pack manifest with metadata
+├── agents/
+│   └── senior-php-developer.md          # Agent definition with YAML frontmatter
+├── instructions/
+│   ├── clean-code-principles.md         # Clean code instruction pack
+│   ├── database-design-patterns.md      # Database design instruction pack
+│   └── api-design-best-practices.md     # API design instruction pack
+└── prompts/
+    ├── code-review-request.md           # Code review prompt template
+    ├── architecture-review.md           # Architecture review prompt template
+    ├── database-schema-review.md        # Database schema review prompt template
+    └── api-endpoint-design.md           # API endpoint design prompt template
+```
+
+### Agent File Format
+
+Agent files use YAML frontmatter followed by Markdown content:
+
+```markdown
+---
+name: 'Agent Name'
+description: 'Agent description'
+model: gpt-4
+temperature: 0.7
+tools:
+  - tool1
+  - tool2
+---
+
+# Agent markdown content...
+```
+
 ## Overview
 
 This agent is designed to assist with professional PHP development tasks, bringing expertise in:
